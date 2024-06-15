@@ -1056,7 +1056,7 @@ def Create():
            global ok,loop,cp,ok1
            import sys
            loop+=1
-           sys.stdout.write(f'\r\r\033[1;37m [MUGHAL-CREATE] OK:%s \033[1;37m'%(ok));sys.stdout.flush()
+           sys.stdout.write(f'\r\r\033[1;37m [TABISH-CREATE] OK:%s \033[1;37m'%(ok));sys.stdout.flush()
            requests=r.Session()
            from fake_email import Email
            mmail=Email().Mail()
